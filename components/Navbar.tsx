@@ -42,7 +42,7 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    if (active && chainId === 168587773) return
+    //if (active && chainId === 168587773) return
     const switchNetwork = async () => {
       if (active && chainId !== 11155111) {
         await library.provider.request({
@@ -52,7 +52,7 @@ const Navbar = () => {
       }
     }
     switchNetwork()
-  })
+  }, [chainId, active])
 
   const items: any = []
   const start = (
@@ -76,7 +76,7 @@ const Navbar = () => {
           Connect Wallet
         </button>
       ) : (
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <button
             onClick={handleDisconnectWallet}
             className="cursor-pointer uppercase bg-[#292909] text-[12px] md:text-base py-[6px] px-3 md:py-2 md:px-5 text-[#FCFC05] rounded-2xl"
