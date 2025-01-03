@@ -25,7 +25,7 @@ const Navbar = () => {
         params: [
           {
             chainId: '0xa0c71fd',
-            chainName: 'Blast Sepolia',
+            chainName: 'Blast Sepolia Testnet',
             nativeCurrency: {
               name: 'Ethereum',
               symbol: 'ETH',
